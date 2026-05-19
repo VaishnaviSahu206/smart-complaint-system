@@ -6,26 +6,36 @@ function Navbar() {
 
         <div className="navbar">
 
-            <h2>Smart Complaint System</h2>
+            <h1 className="logo">
+
+                Smart Complaint System
+
+            </h1>
 
             <div className="nav-links">
 
                 <Link to="/register-complaint">
-   Register Complaint
-</Link>
+
+                    Register Complaint
+
+                </Link>
 
                 <Link to="/complaints">
+
                     Complaints
+
                 </Link>
 
-                <Link to="/ai">
-                    AI Analysis
-                </Link>
                 <Link to="/signup">
-                        Signup
+
+                    Signup
+
                 </Link>
+
                 <Link to="/">
+
                     Login
+
                 </Link>
 
             </div>

@@ -129,12 +129,15 @@ function ComplaintList() {
                         {item.location}
                     </p>
 
-                    <p className="status">
+                    <span
 
-                        Status:
-                        {item.status}
+    className={`status ${item.status.toLowerCase()}`}
 
-                    </p>
+>
+
+    {item.status}
+
+</span>
 
                     <button
                         className="resolve-btn"
