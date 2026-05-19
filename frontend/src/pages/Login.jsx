@@ -35,10 +35,23 @@ function Login() {
 
         } catch (error) {
 
-            console.log(error);
+   console.log(error);
 
-            alert("Login Failed");
-        }
+   const errorMessage =
+
+      error.response?.data?.message ||
+
+      "Login Failed";
+
+   alert(errorMessage);
+
+   if (
+      errorMessage.includes("signup")
+   ) {
+
+      navigate("/signup");
+   }
+}
     };
 
     return (

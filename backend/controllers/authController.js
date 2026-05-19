@@ -59,10 +59,12 @@ exports.login = async (req, res) => {
 
         if (!user) {
 
-            return res.status(400).json({
-                message: "User not found"
-            });
-        }
+   return res.status(404).json({
+
+      message:
+      "User not registered. Please signup first."
+   });
+}
 
         // compare password
         const isMatch = await bcrypt.compare(
@@ -73,7 +75,7 @@ exports.login = async (req, res) => {
         if (!isMatch) {
 
             return res.status(401).json({
-                message: "Invalid Password"
+                message: "Incorrect Password"
             });
         }
 
