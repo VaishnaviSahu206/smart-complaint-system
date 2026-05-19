@@ -25,10 +25,13 @@ function App() {
         />
 
         <Route
-          path="/"
-          element={<ComplaintForm />}
-        />
-
+   path="/"
+   element={<Login />}
+/>
+<Route
+   path="/register-complaint"
+   element={<ComplaintForm />}
+/>
         <Route
           path="/complaints"
           element={<ComplaintList />}

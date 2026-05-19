@@ -10,9 +10,9 @@ function Navbar() {
 
             <div className="nav-links">
 
-                <Link to="/">
-                    Register
-                </Link>
+                <Link to="/register-complaint">
+   Register Complaint
+</Link>
 
                 <Link to="/complaints">
                     Complaints
@@ -24,7 +24,7 @@ function Navbar() {
                 <Link to="/signup">
                         Signup
                 </Link>
-                <Link to="/login">
+                <Link to="/">
                     Login
                 </Link>
 

@@ -1,11 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 
     const [email, setEmail] = useState("");
 
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
 
     const handleLogin = async (e) => {
 
@@ -29,6 +31,7 @@ function Login() {
             );
 
             alert("Login Successful");
+            navigate("/register-complaint");
 
         } catch (error) {
 

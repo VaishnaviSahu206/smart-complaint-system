@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Signup() {
@@ -12,7 +12,7 @@ function Signup() {
 
     const [password, setPassword] =
         useState("");
-
+const navigate = useNavigate();
     const handleSignup = async (e) => {
 
         e.preventDefault();
@@ -31,6 +31,7 @@ function Signup() {
             );
 
             alert("Signup Successful");
+            navigate("/");
 
         } catch (error) {
 

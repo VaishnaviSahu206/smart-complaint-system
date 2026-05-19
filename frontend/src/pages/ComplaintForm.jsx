@@ -33,6 +33,12 @@ function ComplaintForm() {
 
             const token =
                 localStorage.getItem("token");
+                if (!token) {
+
+   alert("Please login first");
+
+   return;
+}
 
             const res = await axios.post(
 
