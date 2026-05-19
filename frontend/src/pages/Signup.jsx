@@ -35,10 +35,15 @@ const navigate = useNavigate();
 
         } catch (error) {
 
-            console.log(error);
+   console.log(error);
 
-            alert("Signup Failed");
-        }
+   alert(
+
+      error.response?.data?.message ||
+
+      "Signup Failed"
+   );
+}
     };
 
     return (
