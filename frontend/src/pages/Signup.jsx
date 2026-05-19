@@ -21,7 +21,7 @@ function Signup() {
 
             await axios.post(
 
-                "http://localhost:5000/api/auth/signup",
+                "https://smart-complaint-system-ffih.onrender.com/api/auth/signup",
 
                 {
                     name,

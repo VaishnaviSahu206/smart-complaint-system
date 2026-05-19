@@ -36,7 +36,7 @@ function ComplaintForm() {
 
             const res = await axios.post(
 
-                "http://localhost:5000/api/complaints",
+                "https://smart-complaint-system-ffih.onrender.com/api/complaints",
 
                 formData,
 

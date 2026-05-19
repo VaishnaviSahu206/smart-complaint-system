@@ -22,7 +22,7 @@ function ComplaintList() {
 
         const res = await axios.get(
 
-            "http://localhost:5000/api/complaints"
+            "https://smart-complaint-system-ffih.onrender.com/api/complaints"
         );
 
         setComplaints(res.data);
@@ -32,7 +32,7 @@ function ComplaintList() {
 
         const res = await axios.get(
 
-            `http://localhost:5000/api/complaints/search/location?location=${searchLocation}`
+            `https://smart-complaint-system-ffih.onrender.com/api/complaints/search/location?location=${searchLocation}`
         );
 
         setComplaints(res.data);
@@ -42,7 +42,7 @@ function ComplaintList() {
 
         await axios.put(
 
-            `http://localhost:5000/api/complaints/${id}`,
+            `https://smart-complaint-system-ffih.onrender.com/api/complaints/${id}`,
 
             {
                 status: "Resolved"
@@ -55,7 +55,7 @@ function ComplaintList() {
 
     const res = await axios.get(
 
-        `http://localhost:5000/api/complaints/filter/category?category=${category}`
+        `https://smart-complaint-system-ffih.onrender.com/api/complaints/filter/category?category=${category}`
     );
 
     setComplaints(res.data);
