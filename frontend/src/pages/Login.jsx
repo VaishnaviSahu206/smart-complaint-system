@@ -31,7 +31,14 @@ function Login() {
             );
 
             alert("Login Successful");
-            navigate("/register-complaint");
+            if (res.data.role === "admin") {
+
+    navigate("/complaints");
+
+} else {
+
+    navigate("/register-complaint");
+}
 
         } catch (error) {
 

@@ -11,7 +11,12 @@ exports.signup = async (req, res) => {
 
     try {
 
-        const { name, email, password } = req.body;
+        const {
+   name,
+   email,
+   password,
+   role
+} = req.body;
 
         // check existing user
         const existingUser = await User.findOne({ email });
@@ -30,7 +35,8 @@ exports.signup = async (req, res) => {
         const user = await User.create({
             name,
             email,
-            password: hashedPassword
+            password: hashedPassword,
+            role
         });
 
         res.status(201).json({
@@ -94,9 +100,13 @@ exports.login = async (req, res) => {
         );
 
         res.json({
-            message: "Login Successful",
-            token
-        });
+
+    message: "Login Successful",
+
+    token,
+
+    role: user.role
+});
 
     } catch (error) {
 

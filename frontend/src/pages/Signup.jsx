@@ -13,6 +13,8 @@ function Signup() {
     const [password, setPassword] =
         useState("");
 const navigate = useNavigate();
+const [role, setRole] =
+    useState("citizen");
     const handleSignup = async (e) => {
 
         e.preventDefault();
@@ -26,7 +28,8 @@ const navigate = useNavigate();
                 {
                     name,
                     email,
-                    password
+                    password,
+                    role
                 }
             );
 
@@ -77,7 +80,25 @@ const navigate = useNavigate();
                         setPassword(e.target.value)
                     }
                 />
+                <select
+    onChange={(e) =>
+        setRole(e.target.value)
+    }
+>
 
+    <option value="citizen">
+
+        Citizen - Report Complaints
+
+    </option>
+
+    <option value="admin">
+
+        Admin - Manage Complaints
+
+    </option>
+
+</select>
                 <button type="submit">
 
                     Signup
